@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TiendaUT.Context;
 using TiendaUT.Domain;
@@ -34,37 +35,55 @@ namespace TiendaUT.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Product>> PostProduct(Product product)
+        public async Task<ActionResult<Product>> PostProduct(ProductDto product)
         {
-            _context.Products.Add(product);
+            Product newProduct = new Product()
+            {
+                Name = product.Name,
+                Description = product.Description,
+                Price = product.Price,
+                ImageUrl = product.ImageUrl
+            };
+
+            _context.Products.Add(newProduct);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
+            return Ok( newProduct);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, Product product)
+        public async Task<IActionResult> PutProduct(int id, ProductDto product)
         {
-            if (id != product.Id)
+
+            try 
             {
-                return BadRequest();
-            }
-            _context.Entry(product).State = EntityState.Modified;
-            try
-            {
+                Product pro = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
+
+                if (pro != null)
+                {
+                    pro.Name = product.Name;
+                    pro.Description = product.Description;
+                    pro.Price = product.Price;
+                    pro.ImageUrl = product.ImageUrl;
+                    _context.SaveChanges();
+                }
+
+                Product newProduct = new Product()
+                {
+                    Name = product.Name,
+                    Description = product.Description,
+                    Price = product.Price,
+                    ImageUrl = product.ImageUrl
+                };
+
+                _context.Products.Update(pro);
                 await _context.SaveChangesAsync();
+
+                return CreatedAtAction(newProduct.Name, newProduct);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!_context.Products.Any(e => e.Id == id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw new Exception("Ocurrio un error al actualizar" + ex.Message);
             }
-            return NoContent();
         }
 
         [HttpDelete("{id}")]
@@ -79,5 +98,13 @@ namespace TiendaUT.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
+    }
+
+    public class ProductDto
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public string Description { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

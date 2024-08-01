@@ -12,8 +12,10 @@
           "DinkToPdf": "1.0.8",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.6",
           "Microsoft.AspNetCore.OpenApi": "8.0.6",
+          "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.EntityFrameworkCore.Design": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
+          "Microsoft.EntityFrameworkCore.Tools": "8.0.6",
           "PayPalCheckoutSdk": "1.0.4",
           "PayPalCoreSDK": "1.7.1",
           "PayPalHttp": "1.0.1",
@@ -478,6 +480,11 @@
             "assemblyVersion": "8.0.6.0",
             "fileVersion": "8.0.624.26904"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/8.0.6": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "8.0.6"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
@@ -1839,6 +1846,13 @@
       "sha512": "sha512-EUdsIcRew4vxE6pfi3aPUGvAGnfdCswPhWIU07SW5RymZldDCDo2dW/MyQw8nYDMQfsZYgE6+jyCg5VTV8lSMg==",
       "path": "microsoft.entityframeworkcore.sqlserver/8.0.6",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.8.0.6.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/8.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UsrAqShiZQBK2lcZsXoyFPccbiLRd2az1uXe1he2z4r2TUYyxNQFy+eysGCpZg0g62I4jFRJfvXIAmCi4QCUpg==",
+      "path": "microsoft.entityframeworkcore.tools/8.0.6",
+      "hashPath": "microsoft.entityframeworkcore.tools.8.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",

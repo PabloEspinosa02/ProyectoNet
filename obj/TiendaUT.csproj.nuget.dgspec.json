@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\TiendaUT.csproj": {}
+    "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\TiendaUT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\TiendaUT.csproj": {
+    "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\TiendaUT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\TiendaUT.csproj",
+        "projectUniqueName": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\TiendaUT.csproj",
         "projectName": "TiendaUT",
-        "projectPath": "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\TiendaUT.csproj",
-        "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\obj\\",
+        "projectPath": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\TiendaUT.csproj",
+        "packagesPath": "C:\\Users\\edgar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\edgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -69,6 +73,12 @@
               "version": "[8.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
             },

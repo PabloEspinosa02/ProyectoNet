@@ -103,6 +103,35 @@ namespace TiendaUT.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("TiendaUT.Domain.Role", b =>
+                {
+                    b.Property<int>("IdRole")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdRole"));
+
+                    b.Property<string>("NameRole")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdRole");
+
+                    b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            IdRole = 1,
+                            NameRole = "Admin"
+                        },
+                        new
+                        {
+                            IdRole = 2,
+                            NameRole = "User"
+                        });
+                });
+
             modelBuilder.Entity("TiendaUT.Domain.User", b =>
                 {
                     b.Property<int>("Id")
@@ -115,11 +144,10 @@ namespace TiendaUT.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdRole")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Role")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -129,7 +157,27 @@ namespace TiendaUT.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IdRole");
+
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "admin@gmail.com",
+                            IdRole = 1,
+                            PasswordHash = "Admin",
+                            Username = "Admin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "pablo@gmail.com",
+                            IdRole = 2,
+                            PasswordHash = "123456",
+                            Username = "Pablo"
+                        });
                 });
 
             modelBuilder.Entity("TiendaUT.Domain.CartItem", b =>
@@ -156,6 +204,17 @@ namespace TiendaUT.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("TiendaUT.Domain.User", b =>
+                {
+                    b.HasOne("TiendaUT.Domain.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("IdRole")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("TiendaUT.Domain.Order", b =>

@@ -33,12 +33,12 @@ namespace TiendaUT.Controllers
                 return BadRequest("Username is taken");
             }
 
-            var user = new User
+            User user = new User()
             {
                 Username = userDto.Username.ToLower(),
                 PasswordHash = userDto.Password,  // Almacenar contraseña en texto plano
                 Email = userDto.Email,
-                Role = userDto.Role ?? "user"  // Usar el rol especificado o "user" por defecto
+                IdRole = userDto.idRole // Usar el rol especificado o "user" por defecto
             };
 
             _context.Users.Add(user);
@@ -47,21 +47,21 @@ namespace TiendaUT.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<string>> Login(UserDto userDto)
+        public async Task<ActionResult<string>> Login(LoginDto loginDto)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(x => x.Username == userDto.Username);
+            var user = await _context.Users.Include(x => x.Role).SingleOrDefaultAsync(x => x.Username == loginDto.Username);
             if (user == null)
             {
                 return Unauthorized("Invalid username");
             }
 
-            if (userDto.Password != user.PasswordHash)
+            if (loginDto.Password != user.PasswordHash)
             {
                 return Unauthorized("Invalid password");
             }
 
             var token = CreateToken(user);
-            return Ok(new { token, role = user.Role });
+            return Ok(new { token, usuario = user, role = user.Role.NameRole });
         }
 
         private async Task<bool> UserExists(string username)
@@ -74,7 +74,7 @@ namespace TiendaUT.Controllers
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.NameId, user.Username),
-                new Claim(ClaimTypes.Role, user.Role)  // Agregar el rol al token
+                new Claim(ClaimTypes.Role, user.Role.NameRole)  // Agregar el rol al token
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
@@ -99,6 +99,13 @@ namespace TiendaUT.Controllers
         public string Username { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public string Role { get; set; } // Agrega esta línea
+        public int idRole { get; set; } // Agrega esta línea
     }
+
+    public class LoginDto
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+    
 }

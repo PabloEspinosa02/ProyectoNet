@@ -3,14 +3,45 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace TiendaUT.Migrations
 {
     /// <inheritdoc />
-    public partial class UpdateOrderTotalAmountPrecision : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Roles",
+                columns: table => new
+                {
+                    IdRole = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NameRole = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Roles", x => x.IdRole);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -19,11 +50,18 @@ namespace TiendaUT.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdRole = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Users_Roles_IdRole",
+                        column: x => x.IdRole,
+                        principalTable: "Roles",
+                        principalColumn: "IdRole",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,6 +112,24 @@ namespace TiendaUT.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "IdRole", "NameRole" },
+                values: new object[,]
+                {
+                    { 1, "Admin" },
+                    { 2, "User" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Email", "IdRole", "PasswordHash", "Username" },
+                values: new object[,]
+                {
+                    { 1, "admin@gmail.com", 1, "Admin", "Admin" },
+                    { 2, "pablo@gmail.com", 2, "123456", "Pablo" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_CartItems_OrderId",
                 table: "CartItems",
@@ -88,6 +144,11 @@ namespace TiendaUT.Migrations
                 name: "IX_Orders_UserId",
                 table: "Orders",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_IdRole",
+                table: "Users",
+                column: "IdRole");
         }
 
         /// <inheritdoc />
@@ -100,7 +161,13 @@ namespace TiendaUT.Migrations
                 name: "Orders");
 
             migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Roles");
         }
     }
 }

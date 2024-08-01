@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|c:\\users\\edgar\\source\\repos\\proyectonet\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|c:\\users\\edgar\\source\\repos\\proyectonet\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|c:\\users\\edgar\\source\\repos\\proyectonet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|c:\\users\\edgar\\source\\repos\\proyectonet\\domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|solutionrelative:domain\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|c:\\users\\edgar\\source\\repos\\proyectonet\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|solutionrelative:domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|c:\\users\\edgar\\source\\repos\\proyectonet\\migrations\\20240801200957_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67A8EB72-4D4C-46E0-A6E9-AFF05F7F106B}|TiendaUT.csproj|solutionrelative:migrations\\20240801200957_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Migrations\\20240801185250_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240801185250_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 250,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240801200957_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Migrations\\20240801200957_Initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240801200957_Initial.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Migrations\\20240801200957_Initial.cs",
+              "RelativeToolTip": "Migrations\\20240801200957_Initial.cs",
+              "ViewState": "AQIAAKQAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T20:09:57.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Domain\\Product.cs",
+              "RelativeDocumentMoniker": "Domain\\Product.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Domain\\Product.cs",
+              "RelativeToolTip": "Domain\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T19:58:16.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Domain\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\User.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Domain\\User.cs",
+              "RelativeToolTip": "Domain\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T19:58:02.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAqwDEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T19:53:52.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAQwFUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T19:18:43.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAAEAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T18:54:21.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240801185250_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Migrations\\20240801185250_Initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240801185250_Initial.cs",
+              "ToolTip": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\Migrations\\20240801185250_Initial.cs",
+              "RelativeToolTip": "Migrations\\20240801185250_Initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T18:52:50.901Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

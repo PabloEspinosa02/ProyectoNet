@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BraintreeHttp-Dotnet" Version="0.3.0" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="mercadopago-sdk" Version="2.3.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="PayPalCheckoutSdk" Version="1.0.4" />
+    <PackageReference Include="PayPalCoreSDK" Version="1.7.1" />
+    <PackageReference Include="PayPalHttp" Version="1.0.1" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.65" />
+    <PackageReference Include="Stripe" Version="1.12.0" />
+    <PackageReference Include="Stripe.net" Version="45.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+</Project>

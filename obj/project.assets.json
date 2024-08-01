@@ -564,6 +564,18 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/8.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "8.0.6"
+        },
+        "compile": {
+          "lib/net8.0/_._": {}
+        },
+        "runtime": {
+          "lib/net8.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -3619,6 +3631,32 @@
         "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.8.0.6.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Tools/8.0.6": {
+      "sha512": "UsrAqShiZQBK2lcZsXoyFPccbiLRd2az1uXe1he2z4r2TUYyxNQFy+eysGCpZg0g62I4jFRJfvXIAmCi4QCUpg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/8.0.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "docs/PACKAGE.md",
+        "lib/net8.0/_._",
+        "microsoft.entityframeworkcore.tools.8.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net461/any/ef.exe",
+        "tools/net461/win-arm64/ef.exe",
+        "tools/net461/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -8859,8 +8897,10 @@
       "DinkToPdf >= 1.0.8",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.6",
       "Microsoft.AspNetCore.OpenApi >= 8.0.6",
+      "Microsoft.EntityFrameworkCore >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
       "PayPalCheckoutSdk >= 1.0.4",
       "PayPalCoreSDK >= 1.7.1",
       "PayPalHttp >= 1.0.1",
@@ -8872,19 +8912,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pablo\\.nuget\\packages\\": {}
+    "C:\\Users\\edgar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\TiendaUT.csproj",
+      "projectUniqueName": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\TiendaUT.csproj",
       "projectName": "TiendaUT",
-      "projectPath": "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\TiendaUT.csproj",
-      "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pablo\\Documents\\ProyectoFinal\\DWI\\TiendaUT\\obj\\",
+      "projectPath": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\TiendaUT.csproj",
+      "packagesPath": "C:\\Users\\edgar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\edgar\\source\\repos\\ProyectoNet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\edgar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8932,6 +8972,10 @@
             "target": "Package",
             "version": "[8.0.6, )"
           },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.6, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -8939,6 +8983,12 @@
             "version": "[8.0.6, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[8.0.6, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[8.0.6, )"
           },
