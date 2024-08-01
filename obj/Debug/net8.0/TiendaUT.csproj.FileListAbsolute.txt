@@ -151,3 +151,4 @@ C:\Users\Pablo\Documents\ProyectoFinal\DWI\TiendaUT\bin\Debug\net8.0\SixLabors.F
 C:\Users\Pablo\Documents\ProyectoFinal\DWI\TiendaUT\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 C:\Users\Pablo\Documents\ProyectoFinal\DWI\TiendaUT\bin\Debug\net8.0\Stripe.net.dll
 C:\Users\Pablo\Documents\ProyectoFinal\DWI\TiendaUT\bin\Debug\net8.0\de\PdfSharpCore.resources.dll
+C:\Users\Pablo\Documents\ProyectoFinal\DWI\TiendaUT\obj\Debug\net8.0\TiendaUT.sourcelink.json

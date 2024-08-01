@@ -125,11 +125,11 @@ namespace TiendaUT.Controllers
             }
         }
 
-        [HttpPost("mercado-pago-preference")]
-        public async Task<IActionResult> CreatePreference(List<PreferenceRequest> request)
+        [HttpPost("create-preference")]
+        public async Task<IActionResult> CreatePreference([FromBody] List<PreferenceResponse> items)
         {
-            await _mercadoPagoService.CreatePreferenceAsync(request);
-            return Ok();
+            var preference = await _mercadoPagoService.CreatePreferenceAsync(items);
+            return Ok(preference);
         }
 
 

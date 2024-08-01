@@ -1,4 +1,5 @@
 ﻿using MercadoPago.Client.Preference;
+using MercadoPago.Config;
 using MercadoPago.Resource.Preference;
 using TiendaUT.Context;
 
@@ -13,7 +14,7 @@ namespace TiendaUT.Service
         {
             _context = context;
             _configuration = configuration;
-            var accessToken = _configuration["MercadoPago:AccessToken"];
+            MercadoPagoConfig.AccessToken = "TEST-7450692063600852-061622-4c565aa0cfaadbdf0e0c9f85eb05b4ce-389042458";
         }
 
         public async Task<Preference> CreatePreferenceAsync(List<PreferenceResponse> items)
@@ -48,4 +49,16 @@ namespace TiendaUT.Service
 
 
     }
+
+    public class PreferenceResponse
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string PictureUrl { get; set; }
+        public int Quantity { get; set; }
+        public int UnitPrice { get; set; }
+
+    }
+
 }
