@@ -12,5 +12,6 @@ namespace TiendaUT.Domain
         public int Price { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
+        public List<string>? Sizes { get; set; } // Lista opcional de tallas
     }
 }

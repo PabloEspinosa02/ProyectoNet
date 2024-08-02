@@ -42,7 +42,8 @@ namespace TiendaUT.Controllers
                 Name = product.Name,
                 Description = product.Description,
                 Price = product.Price,
-                ImageUrl = product.ImageUrl
+                ImageUrl = product.ImageUrl,
+                Sizes = product.Sizes
             };
 
             _context.Products.Add(newProduct);
@@ -51,7 +52,7 @@ namespace TiendaUT.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, ProductDto product)
+        public async Task<ActionResult<Product>> PutProduct(int id, ProductDto product)
         {
 
             try 
@@ -64,6 +65,7 @@ namespace TiendaUT.Controllers
                     pro.Description = product.Description;
                     pro.Price = product.Price;
                     pro.ImageUrl = product.ImageUrl;
+                    pro.Sizes = product.Sizes;
                     _context.SaveChanges();
                 }
 
@@ -72,13 +74,14 @@ namespace TiendaUT.Controllers
                     Name = product.Name,
                     Description = product.Description,
                     Price = product.Price,
-                    ImageUrl = product.ImageUrl
+                    ImageUrl = product.ImageUrl,
+                    Sizes = product.Sizes
                 };
 
                 _context.Products.Update(pro);
                 await _context.SaveChangesAsync();
 
-                return CreatedAtAction(newProduct.Name, newProduct);
+                return Ok(newProduct);
             }
             catch (Exception ex)
             {
@@ -106,5 +109,6 @@ namespace TiendaUT.Controllers
         public int Price { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
+        public List<string>? Sizes { get; set; } // Lista opcional de tallas
     }
 }

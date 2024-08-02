@@ -12,8 +12,8 @@ using TiendaUT.Context;
 namespace TiendaUT.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240801200957_Initial")]
-    partial class Initial
+    [Migration("20240802170140_Sizes")]
+    partial class Sizes
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -100,6 +100,9 @@ namespace TiendaUT.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Sizes")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
